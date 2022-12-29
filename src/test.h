@@ -1,5 +1,6 @@
 #include <stdio.h>
 #define EPS .005
+//float EPS = 0.005;
 int tests_total = 0;
 int tests_fail = 0;
 #define TEST(EX) do { ++tests_total; if(!(EX)) {\

@@ -3,6 +3,8 @@
 #include <stdlib.h>
 
 #include "image.h"
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable: 4996)
 
 image make_empty_image(int w, int h, int c)
 {
@@ -57,6 +59,9 @@ image load_image_stb(char *filename, int channels)
 {
     int w, h, c;
     unsigned char *data = stbi_load(filename, &w, &h, &c, channels);
+    //FILE* outputFile = fopen("testing.png", "wb");
+    
+
     if (!data) {
         fprintf(stderr, "Cannot load image \"%s\"\nSTB Reason: %s\n",
             filename, stbi_failure_reason());

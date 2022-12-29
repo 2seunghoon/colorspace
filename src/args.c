@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "args.h"
-
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable: 4996)
 void del_arg(int argc, char **argv, int index)
 {
     int i;
